@@ -11,33 +11,6 @@ function NavBar() {
 
   const closeMenu = () => setExpanded(false);
     const [showCareer, setShowCareer] = useState(false);
-useEffect(() => {
-  const fetchJobOpenings = async () => {
-    try {
-      const res = await axios.get(
-        "https://mahadevaaya.com/brainrock.in/brainrock/backendbr/api/job-opening/"
-      );
-
-      if (Array.isArray(res.data) && res.data.length > 0) {
-        
-        // Check if at least one job is NOT closed
-        const hasOpenJob = res.data.some(job => {
-          const status = job.status?.toLowerCase(); // safe check
-          return status !== "closed";
-        });
-
-        setShowCareer(hasOpenJob);
-      } else {
-        setShowCareer(false);
-      }
-    } catch (error) {
-      console.error("Job API Error:", error);
-      setShowCareer(false);
-    }
-  };
-
-  fetchJobOpenings();
-}, []);
 
 
   return (
