@@ -71,14 +71,27 @@ body {
 
 
 
-
+a{
+    text-decoration: none !important;
+}
 
 
 @media only screen and (max-width: 568px) {
   .br-login {
     margin: var(--gov-space-200) var(--gov-space-0) var(--gov-space-0) var(--gov-space-0) !important;
   }
+/* .ayur-menu-wrapper {
+  margin-top: 100px !important;
+} */
+ .ayur-achieve-box{
+padding: 0px !important;
+ }
+ .ayur-nav-menu {
+    top: 0px !important;
 
- 
+ }
+ .ayur-nav-menu{
+    padding-top: 0px !important;
+ }
 
 }
